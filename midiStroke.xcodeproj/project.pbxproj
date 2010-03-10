@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2E0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MainMenu.nib */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		CBC73E9508B039520063859E /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC73E9308B039520063859E /* ApplicationServices.framework */; };
+		CBC73E9608B039520063859E /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC73E9408B039520063859E /* CoreMIDI.framework */; };
+		CBC73E9D08B03EA00063859E /* EndNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC73E9A08B03EA00063859E /* EndNote.m */; };
+		CBC73E9E08B03EA00063859E /* StartNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC73E9C08B03EA00063859E /* StartNote.m */; };
+		CBC73EDD08B044E40063859E /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC73EDC08B044E40063859E /* MyController.m */; };
+		CBC73FC408B0F7C90063859E /* KeyStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC73FC308B0F7C90063859E /* KeyStroke.m */; };
+		CBCA828F114772FD000EB68B /* checkedBtnSmall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CBCA8289114772FD000EB68B /* checkedBtnSmall.tiff */; };
+		CBCA8290114772FD000EB68B /* checkedMinusSmall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CBCA828A114772FD000EB68B /* checkedMinusSmall.tiff */; };
+		CBCA8291114772FD000EB68B /* checkedPlusSmall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CBCA828B114772FD000EB68B /* checkedPlusSmall.tiff */; };
+		CBCA8292114772FD000EB68B /* uncheckedBtnSmall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CBCA828C114772FD000EB68B /* uncheckedBtnSmall.tiff */; };
+		CBCA8293114772FD000EB68B /* uncheckedMinusSmall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CBCA828D114772FD000EB68B /* uncheckedMinusSmall.tiff */; };
+		CBCA8294114772FD000EB68B /* uncheckedPlusSmall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CBCA828E114772FD000EB68B /* uncheckedPlusSmall.tiff */; };
+		CBF3F1AC08B1B82600A7D979 /* gray.icns in Resources */ = {isa = PBXBuildFile; fileRef = CBF3F1AB08B1B82600A7D979 /* gray.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF750370BD2300C91783 /* midiStroke_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = midiStroke_Prefix.pch; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* midiStroke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midiStroke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC73E9308B039520063859E /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		CBC73E9408B039520063859E /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
+		CBC73E9908B03EA00063859E /* EndNote.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EndNote.h; sourceTree = "<group>"; };
+		CBC73E9A08B03EA00063859E /* EndNote.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = EndNote.m; sourceTree = "<group>"; };
+		CBC73E9B08B03EA00063859E /* StartNote.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StartNote.h; sourceTree = "<group>"; };
+		CBC73E9C08B03EA00063859E /* StartNote.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = StartNote.m; sourceTree = "<group>"; };
+		CBC73EDB08B044E40063859E /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
+		CBC73EDC08B044E40063859E /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
+		CBC73FC208B0F7C90063859E /* KeyStroke.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeyStroke.h; sourceTree = "<group>"; };
+		CBC73FC308B0F7C90063859E /* KeyStroke.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeyStroke.m; sourceTree = "<group>"; };
+		CBCA8289114772FD000EB68B /* checkedBtnSmall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = checkedBtnSmall.tiff; sourceTree = "<group>"; };
+		CBCA828A114772FD000EB68B /* checkedMinusSmall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = checkedMinusSmall.tiff; sourceTree = "<group>"; };
+		CBCA828B114772FD000EB68B /* checkedPlusSmall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = checkedPlusSmall.tiff; sourceTree = "<group>"; };
+		CBCA828C114772FD000EB68B /* uncheckedBtnSmall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = uncheckedBtnSmall.tiff; sourceTree = "<group>"; };
+		CBCA828D114772FD000EB68B /* uncheckedMinusSmall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = uncheckedMinusSmall.tiff; sourceTree = "<group>"; };
+		CBCA828E114772FD000EB68B /* uncheckedPlusSmall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = uncheckedPlusSmall.tiff; sourceTree = "<group>"; };
+		CBF3F1AB08B1B82600A7D979 /* gray.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = gray.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				CBC73E9508B039520063859E /* ApplicationServices.framework in Frameworks */,
+				CBC73E9608B039520063859E /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBC73E9308B039520063859E /* ApplicationServices.framework */,
+				CBC73E9408B039520063859E /* CoreMIDI.framework */,
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* midiStroke.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* keystroke_v32 */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = keystroke_v32;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CBC73E9908B03EA00063859E /* EndNote.h */,
+				CBC73E9A08B03EA00063859E /* EndNote.m */,
+				CBC73E9B08B03EA00063859E /* StartNote.h */,
+				CBC73E9C08B03EA00063859E /* StartNote.m */,
+				CBC73EDB08B044E40063859E /* MyController.h */,
+				CBC73EDC08B044E40063859E /* MyController.m */,
+				CBC73FC208B0F7C90063859E /* KeyStroke.h */,
+				CBC73FC308B0F7C90063859E /* KeyStroke.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* midiStroke_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBCA8288114772FD000EB68B /* images */,
+				CBF3F1AB08B1B82600A7D979 /* gray.icns */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				2A37F4B4FDCFA73011CA2CEA /* MainMenu.nib */,
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBCA8288114772FD000EB68B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CBCA8289114772FD000EB68B /* checkedBtnSmall.tiff */,
+				CBCA828A114772FD000EB68B /* checkedMinusSmall.tiff */,
+				CBCA828B114772FD000EB68B /* checkedPlusSmall.tiff */,
+				CBCA828C114772FD000EB68B /* uncheckedBtnSmall.tiff */,
+				CBCA828D114772FD000EB68B /* uncheckedMinusSmall.tiff */,
+				CBCA828E114772FD000EB68B /* uncheckedPlusSmall.tiff */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* midiStroke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB43A88009A9593C005B00EB /* Build configuration list for PBXNativeTarget "midiStroke" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = midiStroke;
+			productInstallPath = "$(HOME)/Applications";
+			productName = keystroke_v32;
+			productReference = 8D15AC370486D014006FF6A4 /* midiStroke.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CB43A88409A9593C005B00EB /* Build configuration list for PBXProject "midiStroke" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* keystroke_v32 */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* midiStroke */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2E0486D014006FF6A4 /* MainMenu.nib in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				CBF3F1AC08B1B82600A7D979 /* gray.icns in Resources */,
+				CBCA828F114772FD000EB68B /* checkedBtnSmall.tiff in Resources */,
+				CBCA8290114772FD000EB68B /* checkedMinusSmall.tiff in Resources */,
+				CBCA8291114772FD000EB68B /* checkedPlusSmall.tiff in Resources */,
+				CBCA8292114772FD000EB68B /* uncheckedBtnSmall.tiff in Resources */,
+				CBCA8293114772FD000EB68B /* uncheckedMinusSmall.tiff in Resources */,
+				CBCA8294114772FD000EB68B /* uncheckedPlusSmall.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				CBC73E9D08B03EA00063859E /* EndNote.m in Sources */,
+				CBC73E9E08B03EA00063859E /* StartNote.m in Sources */,
+				CBC73EDD08B044E40063859E /* MyController.m in Sources */,
+				CBC73FC408B0F7C90063859E /* KeyStroke.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB43A88109A9593C005B00EB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = midiStroke_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OBJROOT = build;
+				PREBINDING = NO;
+				PRODUCT_NAME = midiStroke;
+				SYMROOT = build;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		CB43A88209A9593C005B00EB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = midiStroke_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OBJROOT = build;
+				PREBINDING = NO;
+				PRODUCT_NAME = midiStroke;
+				SYMROOT = build;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		CB43A88309A9593C005B00EB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = midiStroke_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = midiStroke;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		CB43A88509A9593C005B00EB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		CB43A88609A9593C005B00EB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(NATIVE_ARCH),",
+					PPC,
+					ppc,
+					i386,
+				);
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Deployment;
+		};
+		CB43A88709A9593C005B00EB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB43A88009A9593C005B00EB /* Build configuration list for PBXNativeTarget "midiStroke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB43A88109A9593C005B00EB /* Development */,
+				CB43A88209A9593C005B00EB /* Deployment */,
+				CB43A88309A9593C005B00EB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		CB43A88409A9593C005B00EB /* Build configuration list for PBXProject "midiStroke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB43A88509A9593C005B00EB /* Development */,
+				CB43A88609A9593C005B00EB /* Deployment */,
+				CB43A88709A9593C005B00EB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}
