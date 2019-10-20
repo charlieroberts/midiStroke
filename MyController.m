@@ -127,39 +127,38 @@
 			if ([[sp objectForKey:@"channel"] intValue] == channel || [[sp objectForKey:@"channel"] intValue] ==0) {	// if channel is the same or we're looking for all channels
 				if (cc == false || packet->data[2] == [[sp objectForKey:@"ccValue"] intValue] || [[sp objectForKey:@"ccValue"] intValue] == -1) { // optionally looking for specific cc values
 					for (j=0; j<[se count]; j++) {
-						EndNote *en = [se objectAtIndex:j];
-						NSDictionary *eprop = [en properties];
-						char *charString = [(NSString *)[eprop objectForKey: @"keystroke"] UTF8String];
-						int theLetter = [self keyCodeForKeyString:charString];
-						
-						if ([[eprop objectForKey: @"apple"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)55, true ); // command > down
-						}
-						if ([[eprop objectForKey: @"shift"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)56, true ); // shift > down
-						}
-						if ([[eprop objectForKey: @"option"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)58, true ); // option > down
-						}
-						if ([[eprop objectForKey: @"control"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)59, true ); // control > down
-						}
-						
-						CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)theLetter, true); 
-						CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)theLetter, false);
-						
-						if ([[eprop objectForKey: @"apple"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)55, false ); // command > up
-						}
-						if ([[eprop objectForKey: @"shift"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)56, false ); // shift > up
-						}
-						if ([[eprop objectForKey: @"option"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)58, false ); // option > up
-						}
-						if ([[eprop objectForKey: @"control"] intValue] == 1) {
-							CGPostKeyboardEvent( (CGCharCode)0, (CGKeyCode)59, false ); // control > up
-						}
+						dispatch_async(dispatch_get_main_queue(), ^{
+                            EndNote *en = [se objectAtIndex:j];
+                            NSDictionary *eprop = [en properties];
+
+                            char *charString = [(NSString *)[eprop objectForKey: @"keystroke"] UTF8String];
+                            int theLetter = [self keyCodeForKeyString:charString];
+
+                            CGEventFlags flags = 0;
+                            CGEventRef down = CGEventCreateKeyboardEvent( NULL, (CGKeyCode)theLetter, true);
+                            CGEventRef up = CGEventCreateKeyboardEvent( NULL, (CGKeyCode)theLetter, false);
+                            
+                            if ([[eprop objectForKey: @"apple"] intValue] == 1) {
+                                flags = flags | kCGEventFlagMaskCommand;
+                            }
+                            if ([[eprop objectForKey: @"shift"] intValue] == 1) {
+                                flags = flags | kCGEventFlagMaskShift;
+                            }
+                            if ([[eprop objectForKey: @"option"] intValue] == 1) {
+                                flags = flags | kCGEventFlagMaskAlternate;
+                            }
+                            if ([[eprop objectForKey: @"control"] intValue] == 1) {
+                                flags = flags | kCGEventFlagMaskControl;
+                            }
+                            
+                            CGEventSetFlags(down, (flags | CGEventGetFlags(down)));
+                            CGEventPost(kCGHIDEventTap, down);
+                            CFRelease(down);
+                            
+                            CGEventSetFlags(up, (flags | CGEventGetFlags(up)));
+                            CGEventPost(kCGHIDEventTap, up);
+                            CFRelease(up);
+                        });
 					}
 				}
 			}

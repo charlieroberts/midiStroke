@@ -91,12 +91,14 @@ static void readProc(const MIDIPacketList *pktlist, void *refCon, void *connRefC
 
         MIDIObjectGetStringProperty(source, kMIDIPropertyName, &pName);
 		OSStatus modelCheck = MIDIObjectGetStringProperty(source, kMIDIPropertyModel, &pModel);
-		if(modelCheck != kMIDIUnknownProperty) {
+		if(modelCheck != kMIDIUnknownProperty && pModel != nil) {
 			[mNum appendString:(NSString *)pModel];
 			[mNum appendString:@" "];
 		}
-		[mNum appendString:(NSString *)pName];
-		[sourcePopup insertItemWithTitle:mNum atIndex:i+1];      // ... if not adds source to both popup menus
+        if( pName != nil ) {
+		  [mNum appendString:(NSString *)pName];
+		  [sourcePopup insertItemWithTitle:mNum atIndex:i+1];
+        }
 	}
 	CFRelease(sourceArray);
 }
