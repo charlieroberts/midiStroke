@@ -116,8 +116,9 @@
 	int packetStart = packet->data[0];		// remembers original type and channel of message before altering
 	if ((packetStart>>4) == 0x0b) { cc = true; }
 	
-	//printf("the channel is: %i \n", channel);
-	//printf("the note is: %i \n", packet->data[1]);
+	printf("the channel is: %i \n", channel);
+	printf("the note is: %i \n", packet->data[1]);
+    printf("cc is: %i \n", cc);
 	
 	for (i=0; i<[_startNotes count]; i++) {	
 		StartNote *sn = [_startNotes objectAtIndex:i];						// creates a startNote object for each item in list
@@ -125,7 +126,14 @@
 		NSMutableArray *se = [sn endNotes];
 		if ([[sp objectForKey:@"number"] intValue] == packet->data[1]) {	// if note / pgm / or cc number is the same as the received midi message
 			if ([[sp objectForKey:@"channel"] intValue] == channel || [[sp objectForKey:@"channel"] intValue] ==0) {	// if channel is the same or we're looking for all channels
-				if (cc == false || packet->data[2] == [[sp objectForKey:@"ccValue"] intValue] || [[sp objectForKey:@"ccValue"] intValue] == -1) { // optionally looking for specific cc values
+                
+                int ccValue = [[sp objectForKey:@"ccValue"] intValue];
+                printf("ccValue is: %i \n", ccValue);
+                printf("received cc: %i \n", packet->data[2]);
+                
+                // fixup to avoid non-cc messages to always fire
+				if ((cc == true && (packet->data[2] == ccValue || ccValue == -1)) ||
+                    (cc == false && ccValue == -1) ) { // optionally looking for specific cc values
 					for (j=0; j<[se count]; j++) {
 						dispatch_async(dispatch_get_main_queue(), ^{
                             EndNote *en = [se objectAtIndex:j];
@@ -133,6 +141,9 @@
 
                             char *charString = [(NSString *)[eprop objectForKey: @"keystroke"] UTF8String];
                             int theLetter = [self keyCodeForKeyString:charString];
+                            
+                            printf("charString: %s \n", charString);
+                            printf("sending keystroke %i \n", theLetter);
 
                             CGEventFlags flags = 0;
                             CGEventRef down = CGEventCreateKeyboardEvent( NULL, (CGKeyCode)theLetter, true);
