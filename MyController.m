@@ -56,6 +56,16 @@
     {
         [_startNotes autorelease];
         _startNotes = [[NSMutableArray alloc] initWithArray: newStartNotes];
+
+        [_startNotes sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            if ([((StartNote*)obj1).properties[@"number"] intValue] < [((StartNote*)obj2).properties[@"number"] intValue]) {
+                return (NSComparisonResult)NSOrderedAscending;
+            } else if ([((StartNote*)obj1).properties[@"number"] intValue] > [((StartNote*)obj2).properties[@"number"] intValue]) {
+                return (NSComparisonResult)NSOrderedDescending;
+            } else {
+                return (NSComparisonResult)NSOrderedSame;
+            }
+        }];
     }
 }
 
