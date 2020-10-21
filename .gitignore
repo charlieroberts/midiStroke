@@ -1,0 +1,8 @@
+
+**/.DS_Store
+build/*
+DerivedData/*
+.DS_Store
+build/.DS_Store
+build/Development/.DS_Store
+English.lproj/.DS_Store
