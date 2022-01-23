@@ -94,11 +94,13 @@ static void readProc(const MIDIPacketList *pktlist, void *refCon, void *connRefC
 		if(modelCheck != kMIDIUnknownProperty && pModel != nil) {
 			[mNum appendString:(NSString *)pModel];
 			[mNum appendString:@" "];
-		}
+        } else {
+            [mNum appendFormat:@"No-name Device #%d ", i];
+        }
         if( pName != nil ) {
 		  [mNum appendString:(NSString *)pName];
-		  [sourcePopup insertItemWithTitle:mNum atIndex:i+1];
         }
+        [sourcePopup insertItemWithTitle:mNum atIndex:i+1];
 	}
 	CFRelease(sourceArray);
 }
