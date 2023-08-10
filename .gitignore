@@ -6,3 +6,4 @@ DerivedData/*
 build/.DS_Store
 build/Development/.DS_Store
 English.lproj/.DS_Store
+.DS_Store
